@@ -4,6 +4,7 @@ import Env
 import Subst
 import Syntax
 
+-- Type unification
 unify :: Type -> Type -> TypeSubst 
 unify t tv@(TVar _)             = extendSubst tv t emptySubst 
 unify tv@(TVar _) t             = extendSubst tv t emptySubst
